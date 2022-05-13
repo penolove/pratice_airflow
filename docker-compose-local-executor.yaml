@@ -1,0 +1,13 @@
+version: '3.0'
+services:
+  airflow:
+    image: ${AIRFLOW_IMAGE_NAME:-apache/airflow:2.3.0}
+    restart: always
+    environment:
+      # load default examples or not
+      - AIRFLOW__CORE__LOAD_EXAMPLES=True
+    command: airflow standalone
+    volumes:
+      - ./dags:/opt/airflow/dags
+    ports:
+      - "8080:8080"
