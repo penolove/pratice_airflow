@@ -5,7 +5,11 @@ this example setup with: https://airflow.apache.org/docs/apache-airflow/stable/s
 ## start service
 
 ```bash
+# use docker-compose
 docker-compose -f docker-compose-local-executor.yaml up
+# or docker compose plugin
+docker compose -f docker-compose-local-executor.yaml up
+
 ```
 
 service will started at http://localhost:8080/

@@ -9,7 +9,7 @@ from airflow.models import DAG
 
 
 class HelloOperator(BaseOperator):
-    template_fields = ['model_path']
+    template_fields = ['ds_without_dash']
 
     @apply_defaults
     def __init__(self, name: str, *args, **kwargs) -> None:
